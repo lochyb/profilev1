@@ -1,3 +1,9 @@
+:root {
+  --light-basecolor: #fff7e0;
+  --light-highlight: #2F4858;
+  --light-accentcolor: #CBD4BE;
+ }
+
 * {
   box-sizing: border-box;
 }
@@ -5,16 +11,16 @@
 html {
   scroll-behavior: smooth
 }
-/* Mobile first queries */
 
 body {
   cursor: auto;
   line-height: 1.5;
-  background-color: #fff7e0;
+  background-color: var(--light-basecolor);
   font-family: 'Josefin Sans', sans-serif;
   padding: 0;
   margin: 0;
   text-align: center;
+  color: var(--light-highlight);
 }
 
 ul {
@@ -25,6 +31,7 @@ ul {
 a {
   color: #fff;
 }
+
 
 .grid-container {
   display: grid;
@@ -38,7 +45,7 @@ a {
   grid-area: menuBar;
   padding: 1rem;
   text-align: left;
-  background-color: #2F4858;
+  background-color: var(--light-highlight);
 }
 
 .topArea {
@@ -47,6 +54,7 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: "profilePic" "info";
+  background-color: var(--light-accentcolor);
 }
 
 .info {
@@ -54,10 +62,8 @@ a {
   padding: 2rem;
   min-width: 40ch;
   place-content: center;
-  background-color: #CBD4BE;
+  background-color: var(--light-accentcolor);
   margin: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .profilePic {
@@ -68,7 +74,7 @@ a {
   max-width: 20em;
   height: auto;
   border-radius: 100px;
-  padding: 1rem;
+  padding: 1rem 1rem 0;
 }
 
 .aboutMe {
@@ -76,11 +82,10 @@ a {
   padding: 2rem;
   text-align: center;
   min-width: 40ch;
-  background-color: #CBD4BE;
-  margin: 2rem;
+  background-color: var(--light-accentcolor);
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
+  margin: 2rem;
 }
 
 .cards{
@@ -95,7 +100,7 @@ a {
  
 .hobbies, .skills, .otherskills{
   padding: 2rem;
-  background-color: #CBD4BE;
+  background-color: var(--light-accentcolor);
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   flex: 1 1;
@@ -118,26 +123,20 @@ grid-area: hobbies;
   place-items: center;
   padding: 1em;
   text-align: center;
-  background-color: #2F4858;
+  background-color: var(--light-highlight);
   color: white;
 }
 
-/* Larger than mobile */
 
-@media (min-width: 400px) {}
 
-/* Larger than phone or tablet */
+@media (prefers-color-scheme: dark) {
+  /* body{
+  background-color: #505050;
+} */
+}
 
 @media (min-width: 550px) {
   .cards{
     flex-direction: row;
   }
 }
-
-/* Larger than tablet */
-
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-
-@media (min-width: 1300px) {}

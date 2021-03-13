@@ -2,7 +2,7 @@
   --light-basecolor: #fff7e0;
   --light-highlight: #2F4858;
   --light-accentcolor: #CBD4BE;
- }
+}
 
 * {
   box-sizing: border-box;
@@ -29,21 +29,22 @@ ul {
 }
 
 a {
-  color: #fff;
+  color: white;
 }
-
 
 .grid-container {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 0.1fr auto auto auto 0.1fr;
   grid-template-areas: "menuBar" "topArea" "middleArea" "cards" "bottomArea";
-  width: auto;
+}
+
+.menuBar, .bottomArea {
+  padding: 1rem;
 }
 
 .menuBar {
   grid-area: menuBar;
-  padding: 1rem;
   text-align: left;
   background-color: var(--light-highlight);
 }
@@ -55,40 +56,47 @@ a {
   grid-template-rows: auto auto;
   grid-template-areas: "profilePic" "info";
   background-color: var(--light-accentcolor);
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.info, .bottomArea {
+  place-items: center;
 }
 
 .info {
   grid-area: info;
   padding: 2rem;
   min-width: 40ch;
-  place-content: center;
   background-color: var(--light-accentcolor);
   margin: 2rem;
 }
 
 .profilePic {
   grid-area: profilePic;
+  padding: 2rem 0;
+  margin: 2rem 0;
 }
 
 .profilePic>img {
   max-width: 20em;
   height: auto;
-  border-radius: 100px;
-  padding: 1rem 1rem 0;
+  border-radius: 20%;
 }
 
 .aboutMe {
   grid-area: about;
   padding: 2rem;
-  text-align: center;
   min-width: 40ch;
   background-color: var(--light-accentcolor);
   border-radius: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 2rem;
 }
 
-.cards{
+.cards {
   grid-area: cards;
   gap: 1rem;
   display: inline-flex;
@@ -97,17 +105,17 @@ a {
   margin: 2rem;
   flex-direction: column;
 }
- 
-.hobbies, .skills, .otherskills{
+
+.hobbies, .skills, .otherskills {
   padding: 2rem;
   background-color: var(--light-accentcolor);
   border-radius: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   flex: 1 1;
 }
 
-.hobbies{
-grid-area: hobbies;
+.hobbies {
+  grid-area: hobbies;
 }
 
 .skills {
@@ -120,23 +128,22 @@ grid-area: hobbies;
 
 .bottomArea {
   grid-area: bottomArea;
-  place-items: center;
-  padding: 1em;
-  text-align: center;
   background-color: var(--light-highlight);
-  color: white;
 }
 
-
-
 @media (prefers-color-scheme: dark) {
-  /* body{
-  background-color: #505050;
-} */
+  :root {
+    --light-basecolor: #222831;
+    --light-highlight: #348587;
+    --light-accentcolor: #30475e;
+  }
+  body {
+    color: white;
+  }
 }
 
 @media (min-width: 550px) {
-  .cards{
+  .cards {
     flex-direction: row;
   }
 }

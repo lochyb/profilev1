@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth
+}
+/* Mobile first queries */
+
+body {
+  cursor: auto;
+  line-height: 1.5;
+  background-color: #fff7e0;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  text-align: justify;
+}
+
+a {
+  color: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.1fr auto auto auto 0.1fr;
+  grid-template-areas: "menuBar" "topArea" "middleArea" "cards" "bottomArea";
+  width: auto;
+}
+
+.menuBar {
+  grid-area: menuBar;
+  padding: 1rem;
+  text-align: left;
+  background-color: #2F4858;
+}
+
+.topArea {
+  grid-area: topArea;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "profilePic" "info";
+}
+
+.info {
+  grid-area: info;
+  padding: 2rem;
+  min-width: 40ch;
+  place-content: center;
+  background-color: #CBD4BE;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.profilePic {
+  grid-area: profilePic;
+}
+
+.profilePic>img {
+  max-width: 20em;
+  height: auto;
+  border-radius: 100px;
+  padding: 1rem;
+}
+
+.aboutMe {
+  grid-area: about;
+  padding: 2rem;
+  text-align: center;
+  min-width: 40ch;
+  background-color: #CBD4BE;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+.cards{
+  grid-area: cards;
+  gap: 1rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem;
+  flex-direction: column;
+}
+ 
+.hobbies, .skills, .otherskills{
+  padding: 2rem;
+  background-color: #CBD4BE;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  flex: 1 1;
+}
+
+.hobbies{
+grid-area: hobbies;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.otherskills {
+  grid-area: otherskills;
+}
+
+.bottomArea {
+  grid-area: bottomArea;
+  place-items: center;
+  padding: 1em;
+  text-align: center;
+  background-color: #2F4858;
+  color: white;
+}
+
+/* Larger than mobile */
+
+@media (min-width: 400px) {}
+
+/* Larger than phone or tablet */
+
+@media (min-width: 550px) {
+  .cards{
+    flex-direction: row;
+  }
+}
+
+/* Larger than tablet */
+
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+
+@media (min-width: 1300px) {}

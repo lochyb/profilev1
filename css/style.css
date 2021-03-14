@@ -3,6 +3,13 @@
   --light-highlight: #2F4858;
   --light-accentcolor: #CBD4BE;
 }
+@viewport {
+  width: device-width;
+  zoom: 1.1;
+  min-zoom: 0.4;
+  max-zoom: 2;
+  user-zoom: fixed;
+  }
 
 * {
   box-sizing: border-box;
@@ -70,14 +77,13 @@ a {
   grid-area: info;
   padding: 2rem;
   min-width: 40ch;
-  background-color: var(--light-accentcolor);
-  margin: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .profilePic {
   grid-area: profilePic;
   padding: 2rem 0;
-  margin: 2rem 0;
 }
 
 .profilePic>img {
@@ -129,6 +135,7 @@ a {
 .bottomArea {
   grid-area: bottomArea;
   background-color: var(--light-highlight);
+  color: white;
 }
 
 @media (prefers-color-scheme: dark) {

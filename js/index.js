@@ -1,5 +1,3 @@
-
-let d = new Date();
-let currentYear = d.getFullYear();
-
-
+$(document).ready(() => {
+        $("#year").html(new Date().getFullYear());
+    });

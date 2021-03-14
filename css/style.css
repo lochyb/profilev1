@@ -3,13 +3,6 @@
   --light-highlight: #2F4858;
   --light-accentcolor: #CBD4BE;
 }
-@viewport {
-  width: device-width;
-  zoom: 1.1;
-  min-zoom: 0.4;
-  max-zoom: 2;
-  user-zoom: fixed;
-  }
 
 * {
   box-sizing: border-box;
@@ -28,6 +21,7 @@ body {
   margin: 0;
   text-align: center;
   color: var(--light-highlight);
+  width: 100%;
 }
 
 ul {

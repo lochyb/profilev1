@@ -14,7 +14,6 @@
 html {
   scroll-behavior: smooth;
 
-
 }
 
 body {
@@ -42,9 +41,10 @@ a:hover{
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-template-rows: 0.1fr auto auto auto 0.1fr;
   grid-template-areas: "menuBar" "topArea" "middleArea" "cards" "bottomArea";
+  margin: auto;
 }
 
 .menuBar, .bottomArea {
@@ -58,48 +58,45 @@ a:hover{
 }
 
 .topArea {
-  grid-area: topArea;
+  /* grid-area: topArea;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   grid-template-rows: auto auto;
-  grid-template-areas: "profilePic" "info";
+  grid-template-areas: "profilePic" "info"; */
   background-color: var(--light-accentcolor);
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
-  margin: 0 auto;
+  margin: auto;
 }
 
-.info, .bottomArea {
+.bottomArea {
   place-items: center;
 }
 
 .center{
   margin: auto;
 }
-.info {
+/* .info {
   grid-area: info;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-}
+  margin: auto;
+} */
 
 .profilePic {
   grid-area: profilePic;
-  padding: 2rem 2rem 2rem 0 ;
-}
-
-.profilePic>img {
-  max-width: 20em;
-  height: auto;
-  border-radius: 20%;
+  padding: auto ;
+  justify-content: center;
+  align-items: center;
 }
 
 .middleArea{
   display: grid;
   grid-area: middleArea;
-  padding: 2rem;
+  padding: auto;
   justify-content: center;
   margin: auto;
 }
@@ -146,8 +143,7 @@ a:hover{
   grid-area: bottomArea;
   background-color: var(--light-highlight);
   color: white;
-  margin: 0 auto;
-  width: 100vw;
+  margin: auto;
 
 }
 .bottomArea a, .bottomArea p{

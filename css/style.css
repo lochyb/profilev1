@@ -57,41 +57,52 @@ a:hover{
   background-color: var(--light-highlight);
 }
 
-.topArea {
-  /* grid-area: topArea;
+
+.topArea{
+  grid-area: topArea;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas: "profilePic" "info"; */
-  background-color: var(--light-accentcolor);
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-areas: "intro" "pic";
+  background-color: var(--light-highlight);
+  margin: 0 0 2rem 0;
+}
+
+.intro{
+  grid-area: intro;
   justify-content: center;
-  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
   margin: auto;
 }
 
+.pic {
+  grid-area: pic;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto ;
+  
+}
+
+.pic > img{
+  max-width: 20ch;
+
+  justify-content: left;
+  align-items: center;
+  border-radius: 20%;
+}
 .bottomArea {
   place-items: center;
 }
 
-.center{
-  margin: auto;
-}
-/* .info {
-  grid-area: info;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-} */
 
-.profilePic {
-  grid-area: profilePic;
-  padding: auto ;
-  justify-content: center;
-  align-items: center;
-}
+
+
+
+
 
 .middleArea{
   display: grid;
@@ -106,7 +117,7 @@ a:hover{
   background-color: var(--light-accentcolor);
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: auto;
+  margin: auto 2rem;
 }
 
 .cards {
@@ -144,6 +155,7 @@ a:hover{
   background-color: var(--light-highlight);
   color: white;
   margin: auto;
+  width: 100%;
 
 }
 .bottomArea a, .bottomArea p{

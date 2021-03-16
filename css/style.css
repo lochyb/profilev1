@@ -1,7 +1,7 @@
 :root {
-  --secondary: #f8f9fa;
-  --primary: #black;
-  --accent: rgba(13, 110, 139, 0.85);
+  --secondary: #CBD4BE;
+  --primary: #fff7e0;
+  --accent: #2F4858;
 }
 
 * {
@@ -13,17 +13,15 @@
 
 html {
   scroll-behavior: smooth;
-
 }
 
 body {
   cursor: auto;
   line-height: 1.5;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
-  color: var(--light-contrast);
-  color: white
+  color:var(--accent);
 }
 
 ul {
@@ -40,6 +38,8 @@ a:hover{
   opacity: 0.75;
 }
 
+
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -49,12 +49,13 @@ a:hover{
 
 .menuBar, .bottomArea {
   padding: auto;
+  background-color: var(--accent);
 }
 
 .menuBar {
   grid-area: menuBar;
-  text-align: left;
-  background-color: var(--accent);
+  text-align: end;
+  display: none;
 }
 
 
@@ -64,10 +65,8 @@ a:hover{
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: "intro" "pic";
-  background-color: var(--light-contrast);
   margin: 0 0 2rem 0;
-  background-color: var(--accent);
-
+  background-color: var(--secondary); 
 }
 
 .intro{
@@ -75,23 +74,25 @@ a:hover{
   justify-content: center;
   align-items: center;
   margin: auto;
-  display: flex;
-  flex-direction: column;
   padding: 2rem;
-  margin: auto;
+}
+
+.introText{
+  padding:1rem;
 }
 
 .pic {
   grid-area: pic;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto ;
-  
+  padding: 0;
+  margin: 0;
+
 }
 
 .pic > img{
   max-width: 20ch;
-
+  border: 5px var(--accent) solid;
   justify-content: left;
   align-items: center;
   border-radius: 20%;
@@ -99,12 +100,6 @@ a:hover{
 .bottomArea {
   place-items: center;
 }
-
-
-
-
-
-
 
 .middleArea{
   grid-area: middleArea;
@@ -115,9 +110,9 @@ a:hover{
 
 .aboutMe {
   padding: 2rem;
-  background-color: var(--accent);
+  background-color: var(--secondary);
   border-radius: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
   margin: auto 2rem;
 }
 
@@ -133,7 +128,7 @@ a:hover{
 
 .hobbies, .skills, .otherskills {
   padding: 2rem;
-  background-color: var(--accent);
+  background-color: var(--secondary);
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   flex: 1 1;
@@ -153,7 +148,7 @@ a:hover{
 
 .bottomArea {
   grid-area: bottomArea;
-  background-color: var(--accent);
+  background-color: var(--secondary);
   margin: auto;
   width: 100%;
 
@@ -161,19 +156,36 @@ a:hover{
 .bottomArea a, .bottomArea p{
 padding: 0.5rem; 
 text-align: center;
-color: white;
+color:var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --secondary: #222831;
     --light-contrast: #348587;
-    --accent: #30475e;
+    --secondary: #30475e;
   }
-}
+} */
 
 @media (min-width: 550px) {
   .cards {
     flex-direction: row;
+  }
+
+  .intro{
+    display: flex;
+  }
+  .pic{
+    margin: 2rem auto ;
+    padding: 1rem;  
+  }
+  .container{
+    display: none;
+  }
+  .menuBar{
+    display: flex;
+  }
+  .menuBar a {
+    padding: 0.8rem;
   }
 }

@@ -1,6 +1,6 @@
 :root {
-    --primary-color: rgba(13, 110, 139, 0.85);
-    --overlay-color: rgba(13, 110, 139, 0.85);
+    --primary-color: #2F4858;
+    --overlay-color: #2F4858;
     --menu-speed: 0.75s;
   }
   .container {

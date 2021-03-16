@@ -1,33 +1,27 @@
 :root {
-  --light-basecolor: #fff7e0;
-  --light-highlight: #2F4858;
-  --light-accentcolor: #CBD4BE;
+  --secondary: #CBD4BE;
+  --primary: #fff7e0;
+  --accent: #2F4858;
 }
-@viewport {
-  width: device-width;
-  zoom: 1.1;
-  min-zoom: 0.4;
-  max-zoom: 2;
-  user-zoom: fixed;
-  }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
 }
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 body {
   cursor: auto;
   line-height: 1.5;
-  background-color: var(--light-basecolor);
+  background-color: var(--primary);
   font-family: 'Josefin Sans', sans-serif;
-  padding: 0;
-  margin: 0;
   text-align: center;
-  color: var(--light-highlight);
+  color:var(--accent);
 }
 
 ul {
@@ -36,70 +30,90 @@ ul {
 }
 
 a {
+  text-decoration: none;
+  transition: opacity 0.2s ease-in;
   color: white;
 }
+a:hover{
+  opacity: 0.75;
+}
+
+
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 0.1fr auto auto auto 0.1fr;
+  grid-template-columns: 1fr;
   grid-template-areas: "menuBar" "topArea" "middleArea" "cards" "bottomArea";
+  margin: auto;
 }
 
 .menuBar, .bottomArea {
-  padding: 1rem;
+  padding: auto;
+  background-color: var(--accent);
 }
 
 .menuBar {
   grid-area: menuBar;
-  text-align: left;
-  background-color: var(--light-highlight);
+  text-align: end;
+  display: none;
 }
 
-.topArea {
+
+.topArea{
   grid-area: topArea;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas: "profilePic" "info";
-  background-color: var(--light-accentcolor);
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
+  grid-template-areas: "intro" "pic";
+  margin: 0 0 2rem 0;
+  background-color: var(--secondary); 
 }
 
-.info, .bottomArea {
+.intro{
+  grid-area: intro;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 2rem;
+}
+
+.introText{
+  padding:1rem;
+}
+
+.pic {
+  grid-area: pic;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+}
+
+.pic > img{
+  max-width: 20ch;
+  border: 5px var(--accent) solid;
+  justify-content: left;
+  align-items: center;
+  border-radius: 20%;
+}
+.bottomArea {
   place-items: center;
 }
 
-.info {
-  grid-area: info;
-  padding: 2rem;
-  min-width: 40ch;
-  display: flex;
-  flex-direction: column;
-}
-
-.profilePic {
-  grid-area: profilePic;
-  padding: 2rem 0;
-}
-
-.profilePic>img {
-  max-width: 20em;
-  height: auto;
-  border-radius: 20%;
+.middleArea{
+  grid-area: middleArea;
+  padding: auto;
+  justify-content: center;
+  margin: auto;
 }
 
 .aboutMe {
-  grid-area: about;
   padding: 2rem;
-  min-width: 40ch;
-  background-color: var(--light-accentcolor);
+  background-color: var(--secondary);
   border-radius: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 2rem;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+  margin: auto 2rem;
 }
 
 .cards {
@@ -114,7 +128,7 @@ a {
 
 .hobbies, .skills, .otherskills {
   padding: 2rem;
-  background-color: var(--light-accentcolor);
+  background-color: var(--secondary);
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   flex: 1 1;
@@ -134,23 +148,44 @@ a {
 
 .bottomArea {
   grid-area: bottomArea;
-  background-color: var(--light-highlight);
-  color: white;
+  background-color: var(--secondary);
+  margin: auto;
+  width: 100%;
+
+}
+.bottomArea a, .bottomArea p{
+padding: 0.5rem; 
+text-align: center;
+color:var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --light-basecolor: #222831;
-    --light-highlight: #348587;
-    --light-accentcolor: #30475e;
+    --secondary: #222831;
+    --light-contrast: #348587;
+    --secondary: #30475e;
   }
-  body {
-    color: white;
-  }
-}
+} */
 
 @media (min-width: 550px) {
   .cards {
     flex-direction: row;
+  }
+
+  .intro{
+    display: flex;
+  }
+  .pic{
+    margin: 2rem auto ;
+    padding: 1rem;  
+  }
+  .container{
+    display: none;
+  }
+  .menuBar{
+    display: flex;
+  }
+  .menuBar a {
+    padding: 0.8rem;
   }
 }

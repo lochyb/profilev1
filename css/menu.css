@@ -4,6 +4,7 @@
     --menu-speed: 0.75s;
   }
   .container {
+    grid-area: menuBar;
     max-width: 960px;
     margin: auto;
     overflow: hidden;
@@ -12,7 +13,7 @@
 .menu-wrapper {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 1;
 
 }
@@ -20,7 +21,7 @@
 .menu-wrapper .behind {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 2;
     cursor: pointer;
     width: 3rem;
@@ -32,7 +33,7 @@
 .menu-wrapper .hamburger-menu {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 1;
     width: 3.3rem;
     height: 3.3rem;
@@ -106,7 +107,7 @@
 .menu-wrapper .menu {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     visibility: hidden;
@@ -118,14 +119,16 @@
 
 .menu-wrapper .menu > div{
     background:var(--overlay-color);
-    width: 70vw;
+    width: 30vw;
     height: 100vh;
     display:flex;
     flex:none;
     align-items: center;
     justify-content: center;
-    transform: scale(0);
-    transition: all 0.4s ease;
+    transform: translate(100vw);
+    position: absolute;
+    right: 0;
+    transition: all 0.4s ease-in-out
 }
 
 .menu-wrapper .menu > div >div{

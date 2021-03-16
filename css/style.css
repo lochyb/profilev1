@@ -1,13 +1,14 @@
 :root {
-  --light-basecolor: #fff7e0;
-  --light-highlight: #2F4858;
-  --light-accentcolor: #CBD4BE;
+  --secondary: #f8f9fa;
+  --primary: #black;
+  --accent: rgba(13, 110, 139, 0.85);
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color:black
 
 }
 
@@ -19,10 +20,10 @@ html {
 body {
   cursor: auto;
   line-height: 1.5;
-  background-color: var(--light-basecolor);
+  background-color: var(--secondary);
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
-  color: var(--light-highlight);
+  color: var(--light-contrast);
 }
 
 ul {
@@ -54,7 +55,7 @@ a:hover{
 .menuBar {
   grid-area: menuBar;
   text-align: left;
-  background-color: var(--light-highlight);
+  background-color: var(--accent);
 }
 
 
@@ -64,8 +65,9 @@ a:hover{
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: "intro" "pic";
-  background-color: var(--light-highlight);
+  background-color: var(--light-contrast);
   margin: 0 0 2rem 0;
+  background-color: var(--accent);
 }
 
 .intro{
@@ -105,7 +107,6 @@ a:hover{
 
 
 .middleArea{
-  display: grid;
   grid-area: middleArea;
   padding: auto;
   justify-content: center;
@@ -114,7 +115,7 @@ a:hover{
 
 .aboutMe {
   padding: 2rem;
-  background-color: var(--light-accentcolor);
+  /* background-color: var(--accent); */
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: auto 2rem;
@@ -132,7 +133,7 @@ a:hover{
 
 .hobbies, .skills, .otherskills {
   padding: 2rem;
-  background-color: var(--light-accentcolor);
+  background-color: var(--accent);
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   flex: 1 1;
@@ -152,7 +153,7 @@ a:hover{
 
 .bottomArea {
   grid-area: bottomArea;
-  background-color: var(--light-highlight);
+  background-color: var(--light-contrast);
   color: white;
   margin: auto;
   width: 100%;
@@ -165,9 +166,9 @@ text-align: center;
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --light-basecolor: #222831;
-    --light-highlight: #348587;
-    --light-accentcolor: #30475e;
+    --secondary: #222831;
+    --light-contrast: #348587;
+    --accent: #30475e;
   }
   body {
     color: white;

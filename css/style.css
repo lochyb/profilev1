@@ -8,7 +8,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
 }
 
 html {
@@ -21,7 +20,7 @@ body {
   background-color: var(--primary);
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
-  color:var(--accent);
+  color: var(--accent);
 }
 
 ul {
@@ -34,11 +33,10 @@ a {
   transition: opacity 0.2s ease-in;
   color: white;
 }
-a:hover{
+
+a:hover {
   opacity: 0.75;
 }
-
-
 
 .grid-container {
   display: grid;
@@ -58,18 +56,17 @@ a:hover{
   display: none;
 }
 
-
-.topArea{
+.topArea {
   grid-area: topArea;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: "intro" "pic";
   margin: 0 0 2rem 0;
-  background-color: var(--secondary); 
+  background-color: var(--secondary);
 }
 
-.intro{
+.intro {
   grid-area: intro;
   justify-content: center;
   align-items: center;
@@ -77,8 +74,8 @@ a:hover{
   padding: 2rem;
 }
 
-.introText{
-  padding:1rem;
+.introText {
+  padding: 1rem;
 }
 
 .pic {
@@ -87,21 +84,21 @@ a:hover{
   align-items: center;
   padding: 0;
   margin: 0;
-
 }
 
-.pic > img{
+.pic>img {
   max-width: 20ch;
   border: 5px var(--accent) solid;
   justify-content: left;
   align-items: center;
   border-radius: 20%;
 }
+
 .bottomArea {
   place-items: center;
 }
 
-.middleArea{
+.middleArea {
   grid-area: middleArea;
   padding: auto;
   justify-content: center;
@@ -151,12 +148,12 @@ a:hover{
   background-color: var(--secondary);
   margin: auto;
   width: 100%;
-
 }
-.bottomArea a, .bottomArea p{
-padding: 0.5rem; 
-text-align: center;
-color:var(--accent);
+
+.bottomArea a, .bottomArea p {
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--accent);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -171,18 +168,17 @@ color:var(--accent);
   .cards {
     flex-direction: row;
   }
-
-  .intro{
+  .intro {
     display: flex;
   }
-  .pic{
-    margin: 2rem auto ;
-    padding: 1rem;  
+  .pic {
+    margin: 2rem auto;
+    padding: 1rem;
   }
-  .container{
+  .container {
     display: none;
   }
-  .menuBar{
+  .menuBar {
     display: flex;
   }
   .menuBar a {

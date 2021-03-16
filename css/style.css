@@ -156,14 +156,6 @@ a:hover {
   color: var(--accent);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --secondary: #222831;
-    --light-contrast: #348587;
-    --secondary: #30475e;
-  }
-} */
-
 @media (min-width: 550px) {
   .cards {
     flex-direction: row;

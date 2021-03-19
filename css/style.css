@@ -63,7 +63,7 @@ a:hover {
   grid-template-areas: "intro" "pic";
   margin: 0 0 2rem 0;
   background-color: var(--secondary);
-  background-image: url('/Users/Lochyb/Documents/GitHub/profile/images/20201129_065650color.jpg');
+  background-image: url('../images/20201129_065650color.jpg');
   background-position: center;
   background-size: cover;
 
@@ -80,9 +80,12 @@ a:hover {
 
 .introText {
   padding: 1rem;
-  color: white;
-}
+  background-color: rgba(203, 212, 190, 0.75);
+  border: 5px var(--accent) solid;
+  border-radius: 20px;
+  margin: 1rem;
 
+}
 .pic {
   grid-area: pic;
   justify-content: center;
@@ -116,6 +119,7 @@ a:hover {
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
   margin: auto 2rem;
+  text-align: justify;
 }
 
 .cards {

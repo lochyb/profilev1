@@ -158,6 +158,7 @@ a:hover {
   margin:  0 auto 2rem;
   padding: 2rem;
   border-radius: 2rem;
+  min-height: 250px;
 }
 
 .hobbies, .skills, .otherskills {

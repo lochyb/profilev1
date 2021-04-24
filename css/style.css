@@ -151,15 +151,25 @@ a:hover {
 }
 
 .projects{
-  grid-area: projects;
-  display: grid;
-  place-items: center;
-  background-color: var(--secondary);
-  margin:  0 auto 2rem;
-  padding: 2rem;
-  border-radius: 2rem;
+    grid-area: projects;
+    display: flex;
+    place-items: center;
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: 2rem;
+    justify-content: space-around;
+    max-width: 80%;
+    margin: 2rem auto;
+    flex-wrap: wrap;
 }
 
+.projectCard{
+  margin:1rem;
+
+}
+.projectCard img{
+  box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
+}
 .hobbies, .skills, .otherskills {
   padding: 2rem 0;
   background-color: var(--secondary);

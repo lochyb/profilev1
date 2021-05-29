@@ -1,7 +1,7 @@
 :root {
-  --secondary: #CBD4BE;
+  --secondary: #cbd4be;
   --primary: #fff7e0;
-  --accent: #2F4858;
+  --accent: #2f4858;
 }
 
 * {
@@ -19,12 +19,14 @@ body {
   cursor: auto;
   line-height: 1.5;
   background-color: var(--primary);
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
   color: var(--accent);
-  height:100%;
+  height: 100%;
 }
-
+br {
+  border: 5px black solid;
+}
 ul {
   list-style: none;
 }
@@ -42,19 +44,20 @@ a:hover {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "menuBar" "topArea" "middleArea" "cards" "bottomArea";
+  grid-template-areas: "menuBar" "topArea" "middleArea" "cards" "projects" "bottomArea";
   margin: auto;
 }
 
 .grid-container-projects {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "menuBar" "topArea" "projects" "bottomArea";  
+  grid-template-areas: "menuBar" "topArea" "projects-info" "bottomArea";
   height: inherit;
-	grid-template-rows: auto auto 1fr
+  grid-template-rows: auto auto 1fr;
 }
 
-.menuBar, .bottomArea {
+.menuBar,
+.bottomArea {
   padding: auto;
   background-color: var(--accent);
 }
@@ -71,12 +74,10 @@ a:hover {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: "intro" "pic";
-  margin: 0 0 2rem 0;
   background-color: var(--secondary);
-  background-image: url('../images/background.jpg');
+  background-image: url("../images/background.jpg");
   background-position: center;
   background-size: cover;
-
 }
 
 .intro {
@@ -84,18 +85,22 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding: 2rem;
-  
+  padding: 1rem;
 }
 
 .introText {
   padding: 1rem;
-  background-color: rgba(203, 212, 190, 0.75);
   border: 5px var(--accent) solid;
   border-radius: 20px;
-  margin: 1rem;
-
+  background-color: var(--secondary);
 }
+
+.subIntroText {
+  padding: 1rem;
+  border: 5px var(--accent) solid;
+  border-radius: 20px;
+}
+
 .pic {
   grid-area: pic;
   justify-content: center;
@@ -104,19 +109,19 @@ a:hover {
   margin: 0;
 }
 
-.pic>img {
+.pic > img {
   max-width: 20ch;
   border: 5px var(--accent) solid;
   justify-content: left;
   align-items: center;
   border-radius: 2rem;
+  margin: 2rem auto;
 }
 
-.thumbnail{
+.thumbnail {
   height: 250px;
-  width:250px;
+  width: 250px;
   border-radius: 20px;
-
 }
 
 .bottomArea {
@@ -127,16 +132,14 @@ a:hover {
   grid-area: middleArea;
   padding: auto;
   justify-content: center;
-  margin: auto;
+  background-color: var(--secondary);
+  margin: 1rem 0;
 }
 
 .aboutMe {
-  padding: 2rem;
-  background-color: var(--secondary);
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
-  margin: auto 2rem;
-  text-align: justify;
+  padding: 1rem;
+  max-width: 60ch;
+  margin: 0 auto;
 }
 
 .cards {
@@ -145,39 +148,35 @@ a:hover {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 2rem;
   flex-direction: column;
   padding: auto;
 }
 
-.projects{
-    grid-area: projects;
-    display: flex;
-    place-items: center;
-    background-color: var(--secondary);
-    padding: 2rem;
-    border-radius: 2rem;
-    justify-content: space-around;
-    max-width: 80%;
-    margin: 2rem auto;
-    flex-wrap: wrap;
+.projects {
+  grid-area: projects;
+  place-items: center;
+  background-color: var(--secondary);
+  margin: 1rem 0 0 0;
+  padding: bottom 1rem;
 }
-
-.projectCard{
-  margin:1rem;
-
+.projects-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-.projectCard img{
-  box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
+.projectCard {
+  margin: 1rem;
 }
-.hobbies, .skills, .otherskills {
+.projectCard img {
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+}
+.hobbies,
+.skills,
+.otherskills {
   padding: 2rem 0;
   background-color: var(--secondary);
-  border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   flex: 1 1;
-  margin: 2rem 0;
-
 }
 
 .hobbies {
@@ -194,15 +193,16 @@ a:hover {
 
 .bottomArea {
   grid-area: bottomArea;
-  background-color: var(--secondary);
   margin: auto;
   width: 100%;
+  border-top: 2px var(--secondary) solid;
+  color: var(--primary);
 }
 
-.bottomArea a, .bottomArea p {
+.bottomArea a,
+.bottomArea p {
   padding: 0.5rem;
   text-align: center;
-  color: var(--accent);
 }
 
 @media (min-width: 592px) {
@@ -212,11 +212,10 @@ a:hover {
   .intro {
     display: flex;
   }
-  .introText{
+  .introText {
     text-align: left;
   }
   .pic {
-    margin: 2rem auto;
     padding: 1rem;
   }
   .container {

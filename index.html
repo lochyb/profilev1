@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>@Lochyb</title>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
@@ -33,8 +32,8 @@
               <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#skill">Skills</a></li>
-                <li><a href="projects.html">Portfolio</a></li>
-                <li><a href="index-jp.html">日本語</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#">日本語</a></li>
               </ul>
             </div>
           </div>
@@ -43,8 +42,8 @@
     </div>
     <div class="menuBar">
       <a href="#about">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="index-jp.html">日本語</a>
+      <a href="#projects">Projects</a>
+      <a href="#">日本語</a>
     </div>
     <div class="grid-container">
       <div class="topArea">
@@ -58,9 +57,14 @@
             <img alt="profile picture" src="images/profilePic.jpg" />
           </div>
         </div>
-      </div>
+    </div>
 
       <div id="about" class="middleArea">
+        <div class="intro">
+        <div class="subIntroText">
+            <h1>About Me</h1>
+          </div>
+          </div>
         <h4 class="aboutMe">
           Hi There! My name is Lochy(pronounced Lock-Key). I'm an hobbyist web
           designer and tech enthusiast.Currently working as a Translator in
@@ -68,8 +72,11 @@
           land a new job!
         </h4>
       </div>
+
+ 
       <div class="cards">
-        <div class="hobbies">
+        <div class="hobbies"> 
+           
           <h3>My Hobbies include</h3>
           <ul>
             <li>⛺️ Camping</li>
@@ -101,13 +108,37 @@
           </ul>
         </div>
       </div>
+      <div class="projects">
+            <div class="intro">
+              <div class="subIntroText">
+                <h1>Projects Library</h1>
+                <h3>Here is a growing collection of my projects</h4>
+              </div>
+            </div>
+        
+    
+          <div id="projects" class="projects-info">
+            <div class="projectCard">
+              <a href="https://lochyb.github.io/react-weather-app/"><img class="thumbnail" src="images/reactWeatherApp.png" alt="App Thumbnail"></a>
+              <h3>React Weather App</h4>
+            </div>
+          <div class="projectCard">
+            <a href="https://lochyb-weather-app.herokuapp.com/"><img class="thumbnail" src="images/weatherAppThumbnail.png" alt="App Thumbnail"></a>
+            <h3>NodeJs Weather App</h3>
+          </div>
+          </div>
+    
+   
+            
+        </div>
+      </div>
       <div id="bottom" class="bottomArea">
         <p>Contact Me</p>
         <a href="">Email</a>
-        <a href="">Instagram</a>
-        <a href="">Carrier Pigeon</a>
+        <a href="https://github.com/lochyb">Github</a>
+        <a href="https://en.wikipedia.org/wiki/Homing_pigeon">Carrier Pigeon</a>
         <p>Created by Lochlan Bernard. Copyright © <span id="year"></span>.</p>
-      </div>
+        </div>
     </div>
 
     <!-- scripts -->

@@ -133,7 +133,7 @@ a:hover {
   padding: auto;
   justify-content: center;
   background-color: var(--secondary);
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .aboutMe {
@@ -176,10 +176,12 @@ a:hover {
   padding: 2rem 0;
   background-color: var(--secondary);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  flex: 1 1;
+  /* flex: 1 1; */
+  min-width: 275px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem;
 }
 
 .rank-row {
